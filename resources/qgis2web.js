@@ -100,7 +100,7 @@ var map = new ol.Map({
     overlays: [overlayPopup],
     layers: layersList,
     view: new ol.View({
-         maxZoom: 16, minZoom: 3
+         maxZoom: 22, minZoom: 3
     })
 });
 
@@ -111,7 +111,7 @@ layerSwitcher.showPanel();
 
 
     var searchLayer = new SearchLayer({
-      layer: lyr_GEORuasMestradoCarou170723_3,
+      layer: lyr_Ocorrencias_4,
       colName: 'End.Original',
       zoom: 10,
       collapsed: true,
@@ -123,7 +123,7 @@ layerSwitcher.showPanel();
     .getElementsByTagName('button')[0].className +=
     ' fa fa-binoculars';
     
-map.getView().fit([-5192629.482669, -2700642.683793, -5188705.412423, -2697088.227699], map.getSize());
+map.getView().fit([-5191749.170526, -2699283.220804, -5190277.644184, -2697950.299769], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
