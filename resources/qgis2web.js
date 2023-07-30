@@ -100,7 +100,7 @@ var map = new ol.Map({
     overlays: [overlayPopup],
     layers: layersList,
     view: new ol.View({
-         maxZoom: 22, minZoom: 3
+         maxZoom: 20, minZoom: 10
     })
 });
 
@@ -111,8 +111,8 @@ layerSwitcher.showPanel();
 
 
     var searchLayer = new SearchLayer({
-      layer: lyr_Ocorrencias_4,
-      colName: 'End.Original',
+      layer: lyr_Ocorrenciasaleatorizadas_4,
+      colName: 'OCORRÊNCIA',
       zoom: 10,
       collapsed: true,
       map: map
@@ -123,7 +123,7 @@ layerSwitcher.showPanel();
     .getElementsByTagName('button')[0].className +=
     ' fa fa-binoculars';
     
-map.getView().fit([-5191749.170526, -2699283.220804, -5190277.644184, -2697950.299769], map.getSize());
+map.getView().fit([-5192846.960121, -2700394.952434, -5189176.124406, -2696767.797073], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
