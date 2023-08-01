@@ -24,7 +24,7 @@ var wms_layers = [];
                 url: 'http://tile.openstreetmap.org/{z}/{x}/{y}.png'
             })
         });
-var lyr_RasterSP1930_2 = new ol.layer.Tile({
+var lyr_SoPaulo1930GeoSampa_2 = new ol.layer.Tile({
                             source: new ol.source.TileWMS(({
                               url: "http://raster.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wms",
     attributions: ' ',
@@ -33,43 +33,43 @@ var lyr_RasterSP1930_2 = new ol.layer.Tile({
                                 "TILED": "true",
                                 "VERSION": "1.3.0"},
                             })),
-                            title: "Raster [SP 1930]",
+                            title: "São Paulo, 1930 [GeoSampa]",
                             opacity: 1.000000,
                             
                             
                           });
-              wms_layers.push([lyr_RasterSP1930_2, 0]);
-var format_Ocorrenciassaleatorizar_3 = new ol.format.GeoJSON();
-var features_Ocorrenciassaleatorizar_3 = format_Ocorrenciassaleatorizar_3.readFeatures(json_Ocorrenciassaleatorizar_3, 
+              wms_layers.push([lyr_SoPaulo1930GeoSampa_2, 0]);
+var format_OcorrenciasGeradas_3 = new ol.format.GeoJSON();
+var features_OcorrenciasGeradas_3 = format_OcorrenciasGeradas_3.readFeatures(json_OcorrenciasGeradas_3, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_Ocorrenciassaleatorizar_3 = new ol.source.Vector({
+var jsonSource_OcorrenciasGeradas_3 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_Ocorrenciassaleatorizar_3.addFeatures(features_Ocorrenciassaleatorizar_3);
-var lyr_Ocorrenciassaleatorizar_3 = new ol.layer.Vector({
+jsonSource_OcorrenciasGeradas_3.addFeatures(features_OcorrenciasGeradas_3);
+var lyr_OcorrenciasGeradas_3 = new ol.layer.Vector({
                 declutter: true,
-                source:jsonSource_Ocorrenciassaleatorizar_3, 
-                style: style_Ocorrenciassaleatorizar_3,
+                source:jsonSource_OcorrenciasGeradas_3, 
+                style: style_OcorrenciasGeradas_3,
                 interactive: true,
-    title: 'Ocorrencias [s/ aleatorizar]<br />\
-    <img src="styles/legend/Ocorrenciassaleatorizar_3_0.png" /> Pontos gerados<br />\
-    <img src="styles/legend/Ocorrenciassaleatorizar_3_1.png" /> Pontos localizados<br />'
+    title: 'Ocorrencias [Geradas]<br />\
+    <img src="styles/legend/OcorrenciasGeradas_3_0.png" /> Pontos gerados<br />\
+    <img src="styles/legend/OcorrenciasGeradas_3_1.png" /> Pontos localizados<br />'
         });
-var format_Ocorrenciasaleatorizadas_4 = new ol.format.GeoJSON();
-var features_Ocorrenciasaleatorizadas_4 = format_Ocorrenciasaleatorizadas_4.readFeatures(json_Ocorrenciasaleatorizadas_4, 
+var format_OcorrenciasRedistribuidas_4 = new ol.format.GeoJSON();
+var features_OcorrenciasRedistribuidas_4 = format_OcorrenciasRedistribuidas_4.readFeatures(json_OcorrenciasRedistribuidas_4, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_Ocorrenciasaleatorizadas_4 = new ol.source.Vector({
+var jsonSource_OcorrenciasRedistribuidas_4 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_Ocorrenciasaleatorizadas_4.addFeatures(features_Ocorrenciasaleatorizadas_4);
-var lyr_Ocorrenciasaleatorizadas_4 = new ol.layer.Vector({
+jsonSource_OcorrenciasRedistribuidas_4.addFeatures(features_OcorrenciasRedistribuidas_4);
+var lyr_OcorrenciasRedistribuidas_4 = new ol.layer.Vector({
                 declutter: true,
-                source:jsonSource_Ocorrenciasaleatorizadas_4, 
-                style: style_Ocorrenciasaleatorizadas_4,
+                source:jsonSource_OcorrenciasRedistribuidas_4, 
+                style: style_OcorrenciasRedistribuidas_4,
                 interactive: true,
-    title: 'Ocorrencias [aleatorizadas]<br />\
-    <img src="styles/legend/Ocorrenciasaleatorizadas_4_0.png" /> Pontos gerados<br />\
-    <img src="styles/legend/Ocorrenciasaleatorizadas_4_1.png" /> Pontos localizados<br />'
+    title: 'Ocorrencias [Redistribuidas]<br />\
+    <img src="styles/legend/OcorrenciasRedistribuidas_4_0.png" /> Pontos gerados<br />\
+    <img src="styles/legend/OcorrenciasRedistribuidas_4_1.png" /> Pontos localizados<br />'
         });
 var format_Casosdepolcia_5 = new ol.format.GeoJSON();
 var features_Casosdepolcia_5 = format_Casosdepolcia_5.readFeatures(json_Casosdepolcia_5, 
@@ -266,43 +266,27 @@ maxResolution:4.480714584361914,
                 interactive: true,
                 title: '<img src="styles/legend/Escravizados_15.png" /> Escravizados'
             });
-var format_Mapadecalorsaleatorizar_16 = new ol.format.GeoJSON();
-var features_Mapadecalorsaleatorizar_16 = format_Mapadecalorsaleatorizar_16.readFeatures(json_Mapadecalorsaleatorizar_16, 
+var format_MapadecalorCompontosredistribuidos_16 = new ol.format.GeoJSON();
+var features_MapadecalorCompontosredistribuidos_16 = format_MapadecalorCompontosredistribuidos_16.readFeatures(json_MapadecalorCompontosredistribuidos_16, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_Mapadecalorsaleatorizar_16 = new ol.source.Vector({
+var jsonSource_MapadecalorCompontosredistribuidos_16 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_Mapadecalorsaleatorizar_16.addFeatures(features_Mapadecalorsaleatorizar_16);
-var lyr_Mapadecalorsaleatorizar_16 = new ol.layer.Heatmap({
+jsonSource_MapadecalorCompontosredistribuidos_16.addFeatures(features_MapadecalorCompontosredistribuidos_16);
+var lyr_MapadecalorCompontosredistribuidos_16 = new ol.layer.Heatmap({
                 declutter: true,
-                source:jsonSource_Mapadecalorsaleatorizar_16, 
+                source:jsonSource_MapadecalorCompontosredistribuidos_16, 
                 radius: 5 * 2,
                 gradient: ['#fff5f0', '#fee0d2', '#fcbba1', '#fc9272', '#fb6a4a', '#ef3b2c', '#cb181d', '#a50f15', '#67000d'],
                 blur: 15,
                 shadow: 250,
-                title: 'Mapa de calor [s/ aleatorizar]'
-            });
-var format_Mapadecaloraleatorizado_17 = new ol.format.GeoJSON();
-var features_Mapadecaloraleatorizado_17 = format_Mapadecaloraleatorizado_17.readFeatures(json_Mapadecaloraleatorizado_17, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_Mapadecaloraleatorizado_17 = new ol.source.Vector({
-    attributions: ' ',
-});
-jsonSource_Mapadecaloraleatorizado_17.addFeatures(features_Mapadecaloraleatorizado_17);
-var lyr_Mapadecaloraleatorizado_17 = new ol.layer.Heatmap({
-                declutter: true,
-                source:jsonSource_Mapadecaloraleatorizado_17, 
-                radius: 5 * 2,
-                gradient: ['#fff5f0', '#fee0d2', '#fcbba1', '#fc9272', '#fb6a4a', '#ef3b2c', '#cb181d', '#a50f15', '#67000d'],
-                blur: 15,
-                shadow: 250,
-                title: 'Mapa de calor [aleatorizado]'
+                title: 'Mapa de calor [Com pontos redistribuidos]'
             });
 
-lyr_StamenTonerHybrid_0.setVisible(true);lyr_OSMStandard_1.setVisible(true);lyr_RasterSP1930_2.setVisible(true);lyr_Ocorrenciassaleatorizar_3.setVisible(false);lyr_Ocorrenciasaleatorizadas_4.setVisible(true);lyr_Casosdepolcia_5.setVisible(true);lyr_CompraseVendeseEmpregados_6.setVisible(true);lyr_Profissionaisliberais_7.setVisible(true);lyr_Escolas_8.setVisible(true);lyr_InstituiesPblicas_9.setVisible(true);lyr_Fbricas_10.setVisible(true);lyr_Acidentesereuniesdetrabalho_11.setVisible(true);lyr_Meretrcios_12.setVisible(true);lyr_Armazens_13.setVisible(true);lyr_Botequins_14.setVisible(true);lyr_Escravizados_15.setVisible(true);lyr_Mapadecalorsaleatorizar_16.setVisible(false);lyr_Mapadecaloraleatorizado_17.setVisible(true);
-var layersList = [lyr_StamenTonerHybrid_0,lyr_OSMStandard_1,lyr_RasterSP1930_2,lyr_Ocorrenciassaleatorizar_3,lyr_Ocorrenciasaleatorizadas_4,lyr_Casosdepolcia_5,lyr_CompraseVendeseEmpregados_6,lyr_Profissionaisliberais_7,lyr_Escolas_8,lyr_InstituiesPblicas_9,lyr_Fbricas_10,lyr_Acidentesereuniesdetrabalho_11,lyr_Meretrcios_12,lyr_Armazens_13,lyr_Botequins_14,lyr_Escravizados_15,lyr_Mapadecalorsaleatorizar_16,lyr_Mapadecaloraleatorizado_17];
-lyr_Ocorrenciassaleatorizar_3.set('fieldAliases', {'RUA': 'RUA', 'N.': 'N.', 'ANO': 'ANO', 'RUA.ATUAL': 'RUA.ATUAL', 'INTERVALO': 'INTERVALO', 'OCORRÊNCIA': 'OCORRÊNCIA', 'CATEGORIA.I': 'CATEGORIA.I', 'CATEGORIA.II': 'CATEGORIA.II', 'FONTE': 'FONTE', 'DATA': 'DATA', 'Link': 'Link', 'X': 'X', 'End.Completo': 'End.Completo', 'Controle': 'Controle', 'ControleGoogle': 'ControleGoogle', 'ID': 'ID', 'End.Original': 'End.Original', 'Latitude': 'Latitude', 'Longitude': 'Longitude', 'EnderecoGerado': 'EnderecoGerado', 'PontoOriginal': 'PontoOriginal', });
-lyr_Ocorrenciasaleatorizadas_4.set('fieldAliases', {'RUA': 'RUA', 'N.': 'N.', 'ANO': 'ANO', 'RUA.ATUAL': 'RUA.ATUAL', 'INTERVALO': 'INTERVALO', 'OCORRÊNCIA': 'OCORRÊNCIA', 'CATEGORIA.I': 'CATEGORIA.I', 'CATEGORIA.II': 'CATEGORIA.II', 'FONTE': 'FONTE', 'DATA': 'DATA', 'Link': 'Link', 'X': 'X', 'End.Completo': 'End.Completo', 'Controle': 'Controle', 'ControleGoogle': 'ControleGoogle', 'ID': 'ID', 'End.Original': 'End.Original', 'Latitude': 'Latitude', 'Longitude': 'Longitude', 'EnderecoGerado': 'EnderecoGerado', 'PontoOriginal': 'PontoOriginal', 'CATEGORIA': 'CATEGORIA', 'Latitude_2': 'Latitude_2', 'Longitude_2': 'Longitude_2', });
+lyr_StamenTonerHybrid_0.setVisible(true);lyr_OSMStandard_1.setVisible(true);lyr_SoPaulo1930GeoSampa_2.setVisible(true);lyr_OcorrenciasGeradas_3.setVisible(false);lyr_OcorrenciasRedistribuidas_4.setVisible(true);lyr_Casosdepolcia_5.setVisible(true);lyr_CompraseVendeseEmpregados_6.setVisible(true);lyr_Profissionaisliberais_7.setVisible(true);lyr_Escolas_8.setVisible(true);lyr_InstituiesPblicas_9.setVisible(true);lyr_Fbricas_10.setVisible(true);lyr_Acidentesereuniesdetrabalho_11.setVisible(true);lyr_Meretrcios_12.setVisible(true);lyr_Armazens_13.setVisible(true);lyr_Botequins_14.setVisible(true);lyr_Escravizados_15.setVisible(true);lyr_MapadecalorCompontosredistribuidos_16.setVisible(false);
+var layersList = [lyr_StamenTonerHybrid_0,lyr_OSMStandard_1,lyr_SoPaulo1930GeoSampa_2,lyr_OcorrenciasGeradas_3,lyr_OcorrenciasRedistribuidas_4,lyr_Casosdepolcia_5,lyr_CompraseVendeseEmpregados_6,lyr_Profissionaisliberais_7,lyr_Escolas_8,lyr_InstituiesPblicas_9,lyr_Fbricas_10,lyr_Acidentesereuniesdetrabalho_11,lyr_Meretrcios_12,lyr_Armazens_13,lyr_Botequins_14,lyr_Escravizados_15,lyr_MapadecalorCompontosredistribuidos_16];
+lyr_OcorrenciasGeradas_3.set('fieldAliases', {'RUA': 'RUA', 'N.': 'N.', 'ANO': 'ANO', 'RUA.ATUAL': 'RUA.ATUAL', 'INTERVALO': 'INTERVALO', 'OCORRÊNCIA': 'OCORRÊNCIA', 'CATEGORIA.I': 'CATEGORIA.I', 'CATEGORIA.II': 'CATEGORIA.II', 'FONTE': 'FONTE', 'DATA': 'DATA', 'Link': 'Link', 'X': 'X', 'End.Completo': 'End.Completo', 'Controle': 'Controle', 'ControleGoogle': 'ControleGoogle', 'ID': 'ID', 'End.Original': 'End.Original', 'Latitude': 'Latitude', 'Longitude': 'Longitude', 'EnderecoGerado': 'EnderecoGerado', 'PontoOriginal': 'PontoOriginal', });
+lyr_OcorrenciasRedistribuidas_4.set('fieldAliases', {'RUA': 'RUA', 'N.': 'N.', 'ANO': 'ANO', 'RUA.ATUAL': 'RUA.ATUAL', 'INTERVALO': 'INTERVALO', 'OCORRÊNCIA': 'OCORRÊNCIA', 'CATEGORIA.I': 'CATEGORIA.I', 'CATEGORIA.II': 'CATEGORIA.II', 'FONTE': 'FONTE', 'DATA': 'DATA', 'Link': 'Link', 'X': 'X', 'End.Completo': 'End.Completo', 'Controle': 'Controle', 'ControleGoogle': 'ControleGoogle', 'ID': 'ID', 'End.Original': 'End.Original', 'Latitude': 'Latitude', 'Longitude': 'Longitude', 'EnderecoGerado': 'EnderecoGerado', 'PontoOriginal': 'PontoOriginal', 'CATEGORIA': 'CATEGORIA', 'Latitude_2': 'Latitude_2', 'Longitude_2': 'Longitude_2', });
 lyr_Casosdepolcia_5.set('fieldAliases', {'OCORRÊNCIA': 'OCORRÊNCIA', 'FONTE': 'FONTE', 'Link': 'Link', 'End.Comple': 'End.Comple', 'ID': 'ID', 'End.Origin': 'End.Origin', 'PontoOrigi': 'PontoOrigi', 'CATEGORIA': 'CATEGORIA', });
 lyr_CompraseVendeseEmpregados_6.set('fieldAliases', {'RUA': 'RUA', 'N.': 'N.', 'ANO': 'ANO', 'RUA.ATUAL': 'RUA.ATUAL', 'INTERVALO': 'INTERVALO', 'OCORRÊNCIA': 'OCORRÊNCIA', 'CATEGORIA.': 'CATEGORIA.', 'CATEGORI_1': 'CATEGORI_1', 'FONTE': 'FONTE', 'DATA': 'DATA', 'Link': 'Link', 'X': 'X', 'End.Comple': 'End.Comple', 'Controle': 'Controle', 'ControleGo': 'ControleGo', 'ID': 'ID', 'End.Origin': 'End.Origin', 'Latitude': 'Latitude', 'Longitude': 'Longitude', 'EnderecoGe': 'EnderecoGe', 'PontoOrigi': 'PontoOrigi', 'CATEGORIA': 'CATEGORIA', 'Latitude_2': 'Latitude_2', 'Longitude_': 'Longitude_', });
 lyr_Profissionaisliberais_7.set('fieldAliases', {'RUA': 'RUA', 'N.': 'N.', 'ANO': 'ANO', 'RUA.ATUAL': 'RUA.ATUAL', 'INTERVALO': 'INTERVALO', 'OCORRÊNCIA': 'OCORRÊNCIA', 'CATEGORIA.': 'CATEGORIA.', 'CATEGORI_1': 'CATEGORI_1', 'FONTE': 'FONTE', 'DATA': 'DATA', 'Link': 'Link', 'X': 'X', 'End.Comple': 'End.Comple', 'Controle': 'Controle', 'ControleGo': 'ControleGo', 'ID': 'ID', 'End.Origin': 'End.Origin', 'Latitude': 'Latitude', 'Longitude': 'Longitude', 'EnderecoGe': 'EnderecoGe', 'PontoOrigi': 'PontoOrigi', 'CATEGORIA': 'CATEGORIA', 'Latitude_2': 'Latitude_2', 'Longitude_': 'Longitude_', });
@@ -314,27 +298,27 @@ lyr_Meretrcios_12.set('fieldAliases', {'RUA': 'RUA', 'N.': 'N.', 'ANO': 'ANO', '
 lyr_Armazens_13.set('fieldAliases', {'OCORRÊNCIA': 'OCORRÊNCIA', 'FONTE': 'FONTE', 'Link': 'Link', 'End.Comple': 'End.Comple', 'ID': 'ID', 'End.Origin': 'End.Origin', 'PontoOrigi': 'PontoOrigi', 'CATEGORIA': 'CATEGORIA', });
 lyr_Botequins_14.set('fieldAliases', {'OCORRÊNCIA': 'OCORRÊNCIA', 'FONTE': 'FONTE', 'Link': 'Link', 'End.Comple': 'End.Comple', 'ID': 'ID', 'End.Origin': 'End.Origin', 'PontoOrigi': 'PontoOrigi', 'CATEGORIA': 'CATEGORIA', });
 lyr_Escravizados_15.set('fieldAliases', {'RUA': 'RUA', 'N.': 'N.', 'ANO': 'ANO', 'RUA.ATUAL': 'RUA.ATUAL', 'INTERVALO': 'INTERVALO', 'OCORRÊNCIA': 'OCORRÊNCIA', 'CATEGORIA.': 'CATEGORIA.', 'CATEGORI_1': 'CATEGORI_1', 'FONTE': 'FONTE', 'DATA': 'DATA', 'Link': 'Link', 'X': 'X', 'End.Comple': 'End.Comple', 'Controle': 'Controle', 'ControleGo': 'ControleGo', 'ID': 'ID', 'End.Origin': 'End.Origin', 'Latitude': 'Latitude', 'Longitude': 'Longitude', 'EnderecoGe': 'EnderecoGe', 'PontoOrigi': 'PontoOrigi', 'CATEGORIA': 'CATEGORIA', 'Latitude_2': 'Latitude_2', 'Longitude_': 'Longitude_', });
-lyr_Ocorrenciassaleatorizar_3.set('fieldImages', {'RUA': 'Hidden', 'N.': 'Hidden', 'ANO': 'Hidden', 'RUA.ATUAL': 'Hidden', 'INTERVALO': 'Hidden', 'OCORRÊNCIA': 'TextEdit', 'CATEGORIA.I': 'Hidden', 'CATEGORIA.II': 'Hidden', 'FONTE': 'TextEdit', 'DATA': 'Hidden', 'Link': 'TextEdit', 'X': 'Hidden', 'End.Completo': 'TextEdit', 'Controle': 'Hidden', 'ControleGoogle': 'Hidden', 'ID': 'Hidden', 'End.Original': 'TextEdit', 'Latitude': 'Hidden', 'Longitude': 'Hidden', 'EnderecoGerado': 'TextEdit', 'PontoOriginal': 'Hidden', });
-lyr_Ocorrenciasaleatorizadas_4.set('fieldImages', {'RUA': 'Hidden', 'N.': 'Hidden', 'ANO': 'Hidden', 'RUA.ATUAL': 'Hidden', 'INTERVALO': 'Hidden', 'OCORRÊNCIA': 'TextEdit', 'CATEGORIA.I': 'Hidden', 'CATEGORIA.II': 'Hidden', 'FONTE': 'TextEdit', 'DATA': 'Hidden', 'Link': 'TextEdit', 'X': 'Hidden', 'End.Completo': 'TextEdit', 'Controle': 'Hidden', 'ControleGoogle': 'Hidden', 'ID': 'Hidden', 'End.Original': 'TextEdit', 'Latitude': 'Hidden', 'Longitude': 'Hidden', 'EnderecoGerado': 'Hidden', 'PontoOriginal': 'Hidden', 'CATEGORIA': 'TextEdit', 'Latitude_2': 'Hidden', 'Longitude_2': 'Hidden', });
+lyr_OcorrenciasGeradas_3.set('fieldImages', {'RUA': 'Hidden', 'N.': 'Hidden', 'ANO': 'Hidden', 'RUA.ATUAL': 'Hidden', 'INTERVALO': 'Hidden', 'OCORRÊNCIA': 'TextEdit', 'CATEGORIA.I': 'Hidden', 'CATEGORIA.II': 'Hidden', 'FONTE': 'TextEdit', 'DATA': 'Hidden', 'Link': 'TextEdit', 'X': 'Hidden', 'End.Completo': 'TextEdit', 'Controle': 'Hidden', 'ControleGoogle': 'Hidden', 'ID': 'Hidden', 'End.Original': 'TextEdit', 'Latitude': 'Hidden', 'Longitude': 'Hidden', 'EnderecoGerado': 'TextEdit', 'PontoOriginal': 'Hidden', });
+lyr_OcorrenciasRedistribuidas_4.set('fieldImages', {'RUA': 'Hidden', 'N.': 'Hidden', 'ANO': 'Hidden', 'RUA.ATUAL': 'Hidden', 'INTERVALO': 'Hidden', 'OCORRÊNCIA': 'TextEdit', 'CATEGORIA.I': 'Hidden', 'CATEGORIA.II': 'Hidden', 'FONTE': 'TextEdit', 'DATA': 'Hidden', 'Link': 'TextEdit', 'X': 'Hidden', 'End.Completo': 'TextEdit', 'Controle': 'Hidden', 'ControleGoogle': 'Hidden', 'ID': 'Hidden', 'End.Original': 'TextEdit', 'Latitude': 'Hidden', 'Longitude': 'Hidden', 'EnderecoGerado': 'Hidden', 'PontoOriginal': 'Hidden', 'CATEGORIA': 'TextEdit', 'Latitude_2': 'Hidden', 'Longitude_2': 'Hidden', });
 lyr_Casosdepolcia_5.set('fieldImages', {'OCORRÊNCIA': 'TextEdit', 'FONTE': 'TextEdit', 'Link': 'TextEdit', 'End.Comple': 'TextEdit', 'ID': 'Hidden', 'End.Origin': 'TextEdit', 'PontoOrigi': 'Hidden', 'CATEGORIA': 'TextEdit', });
 lyr_CompraseVendeseEmpregados_6.set('fieldImages', {'RUA': 'Hidden', 'N.': 'Hidden', 'ANO': 'Hidden', 'RUA.ATUAL': 'Hidden', 'INTERVALO': 'Hidden', 'OCORRÊNCIA': 'TextEdit', 'CATEGORIA.': 'Hidden', 'CATEGORI_1': 'Hidden', 'FONTE': 'TextEdit', 'DATA': 'Hidden', 'Link': 'TextEdit', 'X': 'Hidden', 'End.Comple': 'TextEdit', 'Controle': 'Hidden', 'ControleGo': 'Hidden', 'ID': 'Hidden', 'End.Origin': 'TextEdit', 'Latitude': 'Hidden', 'Longitude': 'Hidden', 'EnderecoGe': 'Hidden', 'PontoOrigi': 'Hidden', 'CATEGORIA': 'TextEdit', 'Latitude_2': 'Hidden', 'Longitude_': 'Hidden', });
 lyr_Profissionaisliberais_7.set('fieldImages', {'RUA': 'Hidden', 'N.': 'Hidden', 'ANO': 'Hidden', 'RUA.ATUAL': 'Hidden', 'INTERVALO': 'Hidden', 'OCORRÊNCIA': 'TextEdit', 'CATEGORIA.': 'Hidden', 'CATEGORI_1': 'Hidden', 'FONTE': 'TextEdit', 'DATA': 'Hidden', 'Link': 'TextEdit', 'X': 'Hidden', 'End.Comple': 'TextEdit', 'Controle': 'Hidden', 'ControleGo': 'Hidden', 'ID': 'Hidden', 'End.Origin': 'TextEdit', 'Latitude': 'Hidden', 'Longitude': 'Hidden', 'EnderecoGe': 'Hidden', 'PontoOrigi': 'Hidden', 'CATEGORIA': 'TextEdit', 'Latitude_2': 'Hidden', 'Longitude_': 'Hidden', });
 lyr_Escolas_8.set('fieldImages', {'RUA': 'Hidden', 'N.': 'Hidden', 'ANO': 'Hidden', 'RUA.ATUAL': 'Hidden', 'INTERVALO': 'Hidden', 'OCORRÊNCIA': 'TextEdit', 'CATEGORIA.': 'Hidden', 'CATEGORI_1': 'Hidden', 'FONTE': 'TextEdit', 'DATA': 'Hidden', 'Link': 'TextEdit', 'X': 'Hidden', 'End.Comple': 'TextEdit', 'Controle': 'Hidden', 'ControleGo': 'Hidden', 'ID': 'Hidden', 'End.Origin': 'TextEdit', 'Latitude': 'Hidden', 'Longitude': 'Hidden', 'EnderecoGe': 'Hidden', 'PontoOrigi': 'Hidden', 'CATEGORIA': 'TextEdit', 'Latitude_2': 'Hidden', 'Longitude_': 'Hidden', });
 lyr_InstituiesPblicas_9.set('fieldImages', {'RUA': 'Hidden', 'N.': 'Hidden', 'ANO': 'Hidden', 'RUA.ATUAL': 'Hidden', 'INTERVALO': 'Hidden', 'OCORRÊNCIA': 'TextEdit', 'CATEGORIA.': 'Hidden', 'CATEGORI_1': 'Hidden', 'FONTE': 'TextEdit', 'DATA': 'Hidden', 'Link': 'TextEdit', 'X': 'Hidden', 'End.Comple': 'TextEdit', 'Controle': 'Hidden', 'ControleGo': 'Hidden', 'ID': 'Hidden', 'End.Origin': 'TextEdit', 'Latitude': 'Hidden', 'Longitude': 'Hidden', 'EnderecoGe': 'Hidden', 'PontoOrigi': 'Hidden', 'CATEGORIA': 'TextEdit', 'Latitude_2': 'Hidden', 'Longitude_': 'Hidden', });
-lyr_Fbricas_10.set('fieldImages', {'RUA': 'Hidden', 'N.': 'Hidden', 'ANO': 'Hidden', 'RUA.ATUAL': 'Hidden', 'INTERVALO': 'Hidden', 'OCORRÊNCIA': 'TextEdit', 'CATEGORIA.': 'Hidden', 'CATEGORI_1': 'Hidden', 'FONTE': 'TextEdit', 'DATA': 'Hidden', 'Link': 'TextEdit', 'X': 'Hidden', 'End.Comple': 'TextEdit', 'Controle': 'Hidden', 'ControleGo': 'Hidden', 'ID': 'Hidden', 'End.Origin': 'TextEdit', 'Latitude': 'Hidden', 'Longitude': 'Hidden', 'EnderecoGe': 'Hidden', 'PontoOrigi': 'TextEdit', 'CATEGORIA': 'TextEdit', 'Latitude_2': 'Hidden', 'Longitude_': 'Hidden', });
+lyr_Fbricas_10.set('fieldImages', {'RUA': 'Hidden', 'N.': 'Hidden', 'ANO': 'Hidden', 'RUA.ATUAL': 'Hidden', 'INTERVALO': 'Hidden', 'OCORRÊNCIA': 'TextEdit', 'CATEGORIA.': 'Hidden', 'CATEGORI_1': 'Hidden', 'FONTE': 'TextEdit', 'DATA': 'Hidden', 'Link': 'TextEdit', 'X': 'Hidden', 'End.Comple': 'TextEdit', 'Controle': 'Hidden', 'ControleGo': 'Hidden', 'ID': 'Hidden', 'End.Origin': 'TextEdit', 'Latitude': 'Hidden', 'Longitude': 'Hidden', 'EnderecoGe': 'Hidden', 'PontoOrigi': 'Hidden', 'CATEGORIA': 'TextEdit', 'Latitude_2': 'Hidden', 'Longitude_': 'Hidden', });
 lyr_Acidentesereuniesdetrabalho_11.set('fieldImages', {'OCORRÊNCIA': 'TextEdit', 'FONTE': 'TextEdit', 'Link': 'TextEdit', 'End.Comple': 'TextEdit', 'ID': 'Hidden', 'End.Origin': 'TextEdit', 'PontoOrigi': 'Hidden', 'CATEGORIA': 'TextEdit', });
 lyr_Meretrcios_12.set('fieldImages', {'RUA': 'Hidden', 'N.': 'Hidden', 'ANO': 'Hidden', 'RUA.ATUAL': 'Hidden', 'INTERVALO': 'Hidden', 'OCORRÊNCIA': 'TextEdit', 'CATEGORIA.': 'Hidden', 'CATEGORI_1': 'Hidden', 'FONTE': 'TextEdit', 'DATA': 'Hidden', 'Link': 'TextEdit', 'X': 'Hidden', 'End.Comple': 'TextEdit', 'Controle': 'Hidden', 'ControleGo': 'Hidden', 'ID': 'Hidden', 'End.Origin': 'TextEdit', 'Latitude': 'Hidden', 'Longitude': 'Hidden', 'EnderecoGe': 'Hidden', 'PontoOrigi': 'Hidden', 'CATEGORIA': 'TextEdit', 'Latitude_2': 'Hidden', 'Longitude_': 'Hidden', });
 lyr_Armazens_13.set('fieldImages', {'OCORRÊNCIA': 'TextEdit', 'FONTE': 'TextEdit', 'Link': 'TextEdit', 'End.Comple': 'TextEdit', 'ID': 'Hidden', 'End.Origin': 'TextEdit', 'PontoOrigi': 'Hidden', 'CATEGORIA': 'TextEdit', });
 lyr_Botequins_14.set('fieldImages', {'OCORRÊNCIA': 'TextEdit', 'FONTE': 'TextEdit', 'Link': 'TextEdit', 'End.Comple': 'TextEdit', 'ID': 'Hidden', 'End.Origin': 'TextEdit', 'PontoOrigi': 'Hidden', 'CATEGORIA': 'TextEdit', });
 lyr_Escravizados_15.set('fieldImages', {'RUA': 'Hidden', 'N.': 'Hidden', 'ANO': 'Hidden', 'RUA.ATUAL': 'Hidden', 'INTERVALO': 'Hidden', 'OCORRÊNCIA': 'TextEdit', 'CATEGORIA.': 'Hidden', 'CATEGORI_1': 'Hidden', 'FONTE': 'TextEdit', 'DATA': 'Hidden', 'Link': 'TextEdit', 'X': 'Hidden', 'End.Comple': 'TextEdit', 'Controle': 'Hidden', 'ControleGo': 'Hidden', 'ID': 'Hidden', 'End.Origin': 'TextEdit', 'Latitude': 'Hidden', 'Longitude': 'Hidden', 'EnderecoGe': 'Hidden', 'PontoOrigi': 'Hidden', 'CATEGORIA': 'TextEdit', 'Latitude_2': 'Hidden', 'Longitude_': 'Hidden', });
-lyr_Ocorrenciassaleatorizar_3.set('fieldLabels', {'OCORRÊNCIA': 'no label', 'FONTE': 'no label', 'Link': 'no label', 'End.Completo': 'no label', 'End.Original': 'no label', 'EnderecoGerado': 'no label', });
-lyr_Ocorrenciasaleatorizadas_4.set('fieldLabels', {'OCORRÊNCIA': 'no label', 'FONTE': 'no label', 'Link': 'no label', 'End.Completo': 'no label', 'End.Original': 'no label', 'CATEGORIA': 'no label', });
+lyr_OcorrenciasGeradas_3.set('fieldLabels', {'OCORRÊNCIA': 'no label', 'FONTE': 'no label', 'Link': 'no label', 'End.Completo': 'no label', 'End.Original': 'no label', 'EnderecoGerado': 'no label', });
+lyr_OcorrenciasRedistribuidas_4.set('fieldLabels', {'OCORRÊNCIA': 'no label', 'FONTE': 'no label', 'Link': 'no label', 'End.Completo': 'no label', 'End.Original': 'no label', 'CATEGORIA': 'no label', });
 lyr_Casosdepolcia_5.set('fieldLabels', {'OCORRÊNCIA': 'no label', 'FONTE': 'no label', 'Link': 'no label', 'End.Comple': 'no label', 'End.Origin': 'no label', 'CATEGORIA': 'no label', });
 lyr_CompraseVendeseEmpregados_6.set('fieldLabels', {'OCORRÊNCIA': 'no label', 'FONTE': 'no label', 'Link': 'no label', 'End.Comple': 'no label', 'End.Origin': 'no label', 'CATEGORIA': 'no label', });
 lyr_Profissionaisliberais_7.set('fieldLabels', {'OCORRÊNCIA': 'no label', 'FONTE': 'no label', 'Link': 'no label', 'End.Comple': 'no label', 'End.Origin': 'no label', 'CATEGORIA': 'no label', });
 lyr_Escolas_8.set('fieldLabels', {'OCORRÊNCIA': 'no label', 'FONTE': 'no label', 'Link': 'no label', 'End.Comple': 'no label', 'End.Origin': 'no label', 'CATEGORIA': 'no label', });
 lyr_InstituiesPblicas_9.set('fieldLabels', {'OCORRÊNCIA': 'no label', 'FONTE': 'no label', 'Link': 'no label', 'End.Comple': 'no label', 'End.Origin': 'no label', 'CATEGORIA': 'no label', });
-lyr_Fbricas_10.set('fieldLabels', {'OCORRÊNCIA': 'no label', 'FONTE': 'no label', 'Link': 'no label', 'End.Comple': 'no label', 'End.Origin': 'no label', 'PontoOrigi': 'no label', 'CATEGORIA': 'no label', });
+lyr_Fbricas_10.set('fieldLabels', {'OCORRÊNCIA': 'no label', 'FONTE': 'no label', 'Link': 'no label', 'End.Comple': 'no label', 'End.Origin': 'no label', 'CATEGORIA': 'no label', });
 lyr_Acidentesereuniesdetrabalho_11.set('fieldLabels', {'OCORRÊNCIA': 'no label', 'FONTE': 'no label', 'Link': 'no label', 'End.Comple': 'no label', 'End.Origin': 'no label', 'CATEGORIA': 'no label', });
 lyr_Meretrcios_12.set('fieldLabels', {'OCORRÊNCIA': 'no label', 'FONTE': 'no label', 'Link': 'no label', 'End.Comple': 'no label', 'End.Origin': 'no label', 'CATEGORIA': 'no label', });
 lyr_Armazens_13.set('fieldLabels', {'OCORRÊNCIA': 'no label', 'FONTE': 'no label', 'Link': 'no label', 'End.Comple': 'no label', 'End.Origin': 'no label', 'CATEGORIA': 'no label', });
