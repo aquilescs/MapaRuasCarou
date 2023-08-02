@@ -110,7 +110,7 @@ map.addControl(layerSwitcher);
     var searchLayer = new SearchLayer({
       layer: lyr_OcorrenciasRedistribuidas_4,
       colName: 'OCORRÊNCIA',
-      zoom: 6,
+      zoom: 18,
       collapsed: true,
       map: map
     });
