@@ -108,7 +108,7 @@ var layerSwitcher = new ol.control.LayerSwitcher({tipLabel: "Layers"});
 map.addControl(layerSwitcher);
 
     var searchLayer = new SearchLayer({
-      layer: lyr_OcorrenciasRedistribuidas_4,
+      layer: lyr_OcorrenciasRedistribuidas_9,
       colName: 'OCORRÊNCIA',
       zoom: 18,
       collapsed: true,
@@ -120,7 +120,7 @@ map.addControl(layerSwitcher);
     .getElementsByTagName('button')[0].className +=
     ' fa fa-binoculars';
     
-map.getView().fit([-5194019.668234, -2702579.815620, -5186677.996804, -2695325.336004], map.getSize());
+map.getView().fit([-5192889.274099, -2701717.943485, -5187525.925796, -2696418.253592], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
