@@ -702,12 +702,15 @@ map.on("rendercomplete", function(evt) {
         var attribution = document.getElementsByClassName('ol-attribution')[0];
         var attributionList = attribution.getElementsByTagName('ul')[0];
         var firstLayerAttribution = attributionList.getElementsByTagName('li')[0];
+        var quilcsAttribution = document.createElement('li');
+        quilcsAttribution.innerHTML = '<a href="mailto:aquiles.coelho@gmail.com">Mapa elaborado por Aquiles Silva • </a>';
         var qgis2webAttribution = document.createElement('li');
         qgis2webAttribution.innerHTML = '<a href="https://github.com/tomchadwin/qgis2web">qgis2web</a> &middot; ';
         var olAttribution = document.createElement('li');
         olAttribution.innerHTML = '<a href="https://openlayers.org/">OpenLayers</a> &middot; ';
         var qgisAttribution = document.createElement('li');
         qgisAttribution.innerHTML = '<a href="https://qgis.org/">QGIS</a>';
+        attributionList.insertBefore(quilcsAttribution, firstLayerAttribution);
         attributionList.insertBefore(qgis2webAttribution, firstLayerAttribution);
         attributionList.insertBefore(olAttribution, firstLayerAttribution);
         attributionList.insertBefore(qgisAttribution, firstLayerAttribution);
