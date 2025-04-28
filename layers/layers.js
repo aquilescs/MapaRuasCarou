@@ -29,7 +29,7 @@ var lyr_SoPaulo1930GeoSampa_1 = new ol.layer.Tile({
               wms_layers.push([lyr_SoPaulo1930GeoSampa_1, 0]);
 var lyr_SoPaulo1924GeoSampa_2 = new ol.layer.Tile({
                             source: new ol.source.TileWMS(({
-                              url: "http://www.pauliceia.dpi.inpe.br/geoserver/pauliceia/wms",
+                              url: "http://raster.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wms",
     attributions: ' ',
                               params: {
                                 "LAYERS": "1924",
