@@ -31,7 +31,7 @@ var style_ReuniesdeTrabalho_20 = function(feature, resolution){
                   anchorXUnits: "pixels",
                   anchorYUnits: "pixels",
                   rotation: 0.0,
-                  src: "styles/ReuniesdeTrabalho_20.png"
+                  src: "styles/amenity_firestation.svg"
             }),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
