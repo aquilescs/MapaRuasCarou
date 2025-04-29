@@ -24,9 +24,8 @@ var style_ReuniesdeTrabalho_20 = function(feature, resolution){
         image: new ol.style.Icon({
                   imgSize: [580, 580],
                   scale: 0.05172413793103448,
-                  color: [255, 49, 49],
-                  fill: [255, 49, 49],
-                  crossOrigin: 'anonymous',
+                  color: '#FF0000',
+                  fill: '#FF0000',
                   anchor: [15, 15],
                   anchorXUnits: "pixels",
                   anchorYUnits: "pixels",
